@@ -5,11 +5,16 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "prebuild": "npx esbuild src/Listener.ts --bundle --platform=browser --outfile=public/Listener.js",
+    "build": "tsc -b && vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "file-saver": "^2.0.5",
+    "jszip": "^3.10.1",
+    "moment": "^2.30.1",
+    "piexifjs": "^1.0.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

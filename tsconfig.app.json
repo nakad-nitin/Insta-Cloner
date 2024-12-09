@@ -17,10 +17,12 @@
 
     /* Linting */
     "strict": true,
+    "baseUrl": "./src",
+    "typeRoots": ["./node_modules/@types", "./types"],
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src"]
+  "include": ["src", "public/helpers.js", "public/serviceWorker.js", "global.d.ts"]
 }
